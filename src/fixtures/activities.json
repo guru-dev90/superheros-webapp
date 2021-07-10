@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "image": "/images/dashboard/activityPhoto.jpg",
+        "name": "Hatha Yoga",
+        "duration": "30 min",
+        "startingTime": "11.10",
+        "endingTime": "11.40",
+        "bookingState": {
+            "isBookingOpen": true,
+            "isWaiting": false,
+            "capacity": 30,
+            "peopleWaiting": 0,
+            "booked": true,
+            "timeToBookingOpen": 0
+        }
+    },
+    {
+        "id": 2,
+        "image": "/images/dashboard/activityPhoto.jpg",
+        "name": "Pancafit",
+        "duration": "30 min",
+        "startingTime": "11.10",
+        "endingTime": "11.40",
+        "bookingState": {
+            "isBookingOpen": true,
+            "isWaiting": false,
+            "capacity": 30,
+            "peopleWaiting": 0,
+            "booked": true,
+            "timeToBookingOpen": 0
+        }
+    },
+    {
+        "id": 3,
+        "image": "/images/dashboard/activityPhoto.jpg",
+        "name": "Body Pump",
+        "duration": "30 min",
+        "startingTime": "11.10",
+        "endingTime": "11.40",
+        "bookingState": {
+            "isBookingOpen": true,
+            "isWaiting": false,
+            "capacity": 30,
+            "peopleWaiting": 0,
+            "booked": true,
+            "timeToBookingOpen": 0
+        }
+    }
+  ]
