@@ -8,6 +8,10 @@ export const Container = styled.section`
 export const Frame = styled.div`
     margin-bottom: 10px;
     width: 967px;
+
+    @media (max-width: 1024px) {
+        width: 250px;
+    }
 `
 
 export const Inner = styled.div`
@@ -15,6 +19,10 @@ export const Inner = styled.div`
     flex-direction: column;
     width: 967px;
     margin: auto;
+
+    @media (max-width: 1024px) {
+        width: 250px;
+    }
 `;
 
 export const Item = styled.div`
@@ -49,7 +57,12 @@ export const Header = styled.div`
     }
     
     @media (max-width: 600px) {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 1.8em 1.2em;
     }
 `;
 
@@ -65,9 +78,14 @@ export const Body = styled.div`
     align-items: center;
     width: 100%;
     color: #053968;
+    text-align: justify;
     
     @media (max-width: 600px) {
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 1.8em 1.2em;
     }
 `;

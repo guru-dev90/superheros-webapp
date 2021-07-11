@@ -26,11 +26,17 @@ export const Grid = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: ${ ({margin}) => margin };
+
+    @media (max-width: 1024px) {
+        margin-left: 0.8rem;
+        margin-top: 0rem;
+    }
 `
 
 export const GridColumn = styled.div`
     display: flex;
     flex-direction: column;
+
 `
 
 export const GridTitle = styled.h4`
@@ -53,11 +59,23 @@ export const Container = styled.div`
     width: ${ ({size}) => size };
     height: 100%;
 
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+
 `
 
 export const Image = styled.img`
     width: 135px;
     height: 135px;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+
+        background: url(${`${process.env.PUBLIC_URL}/images/dashboard/activityPhoto-large.jpg`}) no-repeat;
+        width: 250px; /* Width of new image */
+        height: 135px; /* Height of new image */
+    }
     
 `
 
@@ -65,6 +83,10 @@ export const Title = styled.h5`
     font-size: 0.8rem;
     margin: 0.8rem 0rem;
     color: #053968;
+
+    @media (max-width: 1024px) {
+        margin-left: 0.8rem;
+    }
 `
 
 export const Date = styled.h5`
@@ -72,6 +94,10 @@ export const Date = styled.h5`
     margin-top: 0rem;
     margin-bottom: 0.3rem;
     color: #053968;
+
+    @media (max-width: 1024px) {
+        margin-left: 0.8rem;
+    }
 `
 
 export const ActivityTime = styled.p`
@@ -99,6 +125,10 @@ export const WaitingBeforeMe = styled.p`
     font-size: 0.8rem;
     margin: 0px;
     color: #fc922a;
+
+    @media (max-width: 1024px) {
+        margin-right: 0.5em;
+    }
 `
 
 export const ButtonText = styled.button`

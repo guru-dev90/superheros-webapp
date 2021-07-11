@@ -17,6 +17,10 @@ export const Container = styled.div`
     width: 967px;
     height: inherit;
     margin: 0.5em;
+
+    @media (max-width: 1024px) {
+        width: 250px;
+    }
 `
 
 export const Title = styled.h5`

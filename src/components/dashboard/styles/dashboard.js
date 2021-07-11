@@ -17,6 +17,7 @@ export const Background = styled.section`
         line-height: 22px;
         padding-top: 1rem;
         height: auto;
+        background-color: #53968;
     }
 
 `
@@ -39,7 +40,10 @@ export const Title = styled.h4`
     margin-bottom: 15px;
     color: ${ ({ color }) => color };
     font-weight: 600;
-    font-type: 
+
+    @media (max-width: 1024px) {
+        margin-top: 30px;
+    }
     
 `
 
@@ -49,7 +53,7 @@ export const Column = styled.div`
     justify-content: flex-start;
     align-items: center;
     height: 90%;
-    width: 420px;
+    width: 50%;
     margin-right: ${ ({marginRight}) => marginRight };
     margin-left: ${ ({marginLeft}) => marginLeft };
 
