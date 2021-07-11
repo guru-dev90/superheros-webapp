@@ -16,8 +16,12 @@ export const Group = styled.div`
 
 export const Container = styled.div`
     display: flex;
-    justify-content: flex-end;
-    width: 80%
+    justify-content: center;
+    width: 80%;
+
+    @media (min-width: 1024px) {
+        justify-content: flex-end;
+    }
 `
 
 export const HomeIcon = styled.img`
@@ -25,10 +29,6 @@ export const HomeIcon = styled.img`
     width: 18px;
     margin-right: 40px;
 
-    @media (min-width: 1449px) {
-        height: 45px;
-        width: 167px;
-    }
 `
 
 export const CalendarIcon = styled.img`
@@ -36,10 +36,6 @@ export const CalendarIcon = styled.img`
     width: 18px;
     margin-right: 40px;
 
-    @media (min-width: 1449px) {
-        height: 45px;
-        width: 167px;
-    }
 `
 
 export const BellIcon = styled.img`
@@ -47,10 +43,6 @@ export const BellIcon = styled.img`
     width: 18px;
     margin-right: 40px;
 
-    @media (min-width: 1449px) {
-        height: 45px;
-        width: 167px;
-    }
 `
 
 export const ProfilePicture = styled.img`
@@ -59,8 +51,4 @@ export const ProfilePicture = styled.img`
     margin-right: 40px;
     border-radius: 50%;
 
-    @media (min-width: 1449px) {
-        height: 45px;
-        width: 167px;
-    }
 `

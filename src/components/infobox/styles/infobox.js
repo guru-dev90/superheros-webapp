@@ -1,13 +1,19 @@
 import styled from 'styled-components';
 //import { Link as ReachRouterLink } from 'react-router-dom';
 
-export const Background = styled.section`
+export const Background = styled.div`
     display: flex;
     background-color: white;
     height: 135px;
     width: 420px;
     margin-top: 0.7rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        height: 300px;
+        width: 250px;
+    }
 
 `
 

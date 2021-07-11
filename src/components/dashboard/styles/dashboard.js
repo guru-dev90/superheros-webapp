@@ -11,8 +11,12 @@ export const Background = styled.section`
 
     @media (max-width: 1024px) {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         font-size: 16px;
         line-height: 22px;
+        padding-top: 1rem;
+        height: auto;
     }
 
 `
@@ -24,6 +28,10 @@ export const Container = styled.div`
     align-items: center;
     height: 100%;
     width: 50%;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
 `
 
 export const Title = styled.h4`
@@ -39,8 +47,14 @@ export const Column = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
     height: 90%;
     width: 420px;
     margin-right: ${ ({marginRight}) => marginRight };
     margin-left: ${ ({marginLeft}) => marginLeft };
+
+    @media (max-width: 1024px) {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
 `

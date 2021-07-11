@@ -1,5 +1,6 @@
 import React from 'react';
 import { 
+    Inner,
     Group, 
     Grid,
     GridColumn,
@@ -11,7 +12,10 @@ import {
     Title,
     ActivityTime,
     Duration,
-    ButtonText
+    ButtonCancel,
+    ButtonSubscribe,
+    ButtonOnHold,
+    ButtonActivityNotOpen
 } from './styles/bookingbox';
 
 export default function Bookingbox({ children, ...restProps }) {
@@ -20,6 +24,10 @@ export default function Bookingbox({ children, ...restProps }) {
 
 Bookingbox.Frame = function BookingboxFrame({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>;
+}
+
+Bookingbox.Inner = function BookingboxInner({ children, ...restProps }) {
+    return <Inner {...restProps}>{children}</Inner>;
 }
 
 Bookingbox.Group = function BookingboxGroup({ children, ...restProps }) {
@@ -58,6 +66,18 @@ Bookingbox.ActivityTime = function BookingboxActivityTime({ children, ...restPro
     return <ActivityTime {...restProps}>{children}</ActivityTime>;
 }
 
-Bookingbox.ButtonText = function BookingboxButtonText({ children, ...restProps }) {
-    return <ButtonText {...restProps}>{children}</ButtonText>;
+Bookingbox.ButtonCancel = function BookingboxButtonCancel({ children, ...restProps }) {
+    return <ButtonCancel {...restProps}>{children}</ButtonCancel>;
+}
+
+Bookingbox.ButtonSubscribe = function BookingboxButtonSubscribe({ children, ...restProps }) {
+    return <ButtonSubscribe {...restProps}>{children}</ButtonSubscribe>;
+}
+
+Bookingbox.ButtonOnHold = function BookingboxButtonOnHold({ children, ...restProps }) {
+    return <ButtonOnHold {...restProps}>{children}</ButtonOnHold>;
+}
+
+Bookingbox.ButtonActivityNotOpen = function BookingboxButtonActivityNotOpen({ children, ...restProps }) {
+    return <ButtonActivityNotOpen {...restProps}>{children}</ButtonActivityNotOpen>;
 }

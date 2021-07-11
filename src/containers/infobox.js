@@ -11,7 +11,7 @@ export default function infobox({data, type}){
               <Infobox.Title>{data.name}</Infobox.Title>
               <Infobox.Date>{data.date}</Infobox.Date>
               <Infobox.Grid margin="0rem">
-                <Infobox.ActivityTime>{data.startingTime} - {data.endingTime}</Infobox.ActivityTime>
+                <Infobox.ActivityTime><b>{data.startingTime}</b> - {data.endingTime}</Infobox.ActivityTime>
                 <Infobox.Duration>{data.duration}</Infobox.Duration>
               </Infobox.Grid>
               

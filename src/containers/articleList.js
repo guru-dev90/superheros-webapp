@@ -15,7 +15,7 @@ export default function articleList(){
                 <Article.Frame>
                     {articlesData.map((data, index) => (
                         index < 4 ? 
-                        <Article.Group>
+                        <Article.Group key={data.id}>
                             <Article.Image src={process.env.PUBLIC_URL + '/images/articles/article-cover.jpg'} alt="Cover Image" />
                             <Article.Subgroup>
                                 <Article.Title>{data.title}</Article.Title>

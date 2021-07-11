@@ -44,7 +44,7 @@ export const Title = styled.h5`
 export const Button = styled.button`
     font-size: 0.8rem;
     margin: 0px;
-    border:1px solid black;
+    border:1px solid lightgray;
     background-color: #d4df64;
     display:inline-block;
     cursor:pointer;

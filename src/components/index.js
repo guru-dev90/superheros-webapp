@@ -6,3 +6,4 @@ export { default as Accordion } from './accordion';
 export { default as Article } from './article';
 export { default as Bookingbox } from './bookingbox';
 export { default as Titlebanner } from './titlebanner';
+export { default as SelectContainer } from './selectcontainer';

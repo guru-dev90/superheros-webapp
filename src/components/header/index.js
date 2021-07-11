@@ -40,16 +40,16 @@ Header.Bookings = function HeaderBookings({ to, ...restProps }) {
 
 Header.Notification = function HeaderNotification({ to, ...restProps }) {
     return (
-        <ReachRouterLink to={to}>
-            <BellIcon {...restProps} />
-        </ReachRouterLink>
+        
+        <BellIcon {...restProps} />
+        
     )
 }
 
 Header.ProfilePicture = function HeaderProfilePicture({ to, ...restProps }) {
     return (
-        <ReachRouterLink to={to}>
-            <ProfilePicture {...restProps} />
-        </ReachRouterLink>
+        
+        <ProfilePicture {...restProps} />
+        
     )
 }
