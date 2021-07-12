@@ -8,6 +8,7 @@ export const Background = styled.section`
     background-color: white;
     margin-top: 2.5rem;
     width: 100%;
+    margin-bottom: 2rem;
 
 `
 

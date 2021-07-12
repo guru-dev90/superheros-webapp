@@ -4,7 +4,8 @@ import {
         TrainingAdvertiser as TrainingAdvertiserContainer,
         Announcements as AnnouncementsContainer,
         AppAdvertiser as AppAdvertiserContainer,
-        ArticleList as ArticleListContainer
+        ArticleList as ArticleListContainer,
+        Footer
 } from "../containers"
 
 
@@ -16,6 +17,7 @@ export default function Home(){
            <AnnouncementsContainer/>
            <AppAdvertiserContainer/>
            <ArticleListContainer/>
+           <Footer/>
        </>
     )
 }

@@ -6,3 +6,4 @@ export { default as Announcements } from './announcements';
 export { default as AppAdvertiser } from './appAdvertiser';
 export { default as ArticleList } from './articleList';
 export { default as Bookingbox } from './bookingBox';
+export { default as Footer } from './footer';
