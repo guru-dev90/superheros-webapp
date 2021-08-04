@@ -1,23 +1,19 @@
 import React from "react"
 import {
-        Dashboard as DashboardContainer, 
-        TrainingAdvertiser as TrainingAdvertiserContainer,
-        Announcements as AnnouncementsContainer,
-        AppAdvertiser as AppAdvertiserContainer,
-        ArticleList as ArticleListContainer,
-        Footer
+        Header as HeaderContainer, 
+        Dashboard as DashboardContainer,
+        Accordion as AccordionContainer,
+        Titlebanner as TitleBannerContainer
 } from "../containers"
 
 
 export default function Home(){
     return(
        <>
+           <HeaderContainer/>
+           <AccordionContainer/>
+           <TitleBannerContainer/>
            <DashboardContainer/>
-           <TrainingAdvertiserContainer/>
-           <AnnouncementsContainer/>
-           <AppAdvertiserContainer/>
-           <ArticleListContainer/>
-           <Footer/>
        </>
     )
 }

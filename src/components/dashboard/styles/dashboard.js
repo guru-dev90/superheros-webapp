@@ -1,18 +1,13 @@
 import styled from 'styled-components';
 
 export const Background = styled.section`
+
     display: flex;
-    justify-content: space-around;
-    background: url(${`${process.env.PUBLIC_URL}/images/dashboard/dashboard-background.jpg`});
-    background-repeat: no-repeat;
-    background-size: auto;
-    height: 403px;
+    justify-content: center;
     margin-bottom: 2rem;
 
     @media (max-width: 1024px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        
         font-size: 16px;
         line-height: 22px;
         padding-top: 1rem;
@@ -24,15 +19,12 @@ export const Background = styled.section`
 
 export const Container = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-wrap: wrap;
     align-items: center;
     height: 100%;
-    width: 50%;
+    max-width: 95%;
+    margin-left: 2em;
 
-    @media (max-width: 1024px) {
-        width: 100%;
-    }
 `
 
 export const Title = styled.h4`

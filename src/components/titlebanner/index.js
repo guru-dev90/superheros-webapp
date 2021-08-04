@@ -4,7 +4,7 @@ import {
     Background,  
     Container, 
     Title,
-    ReadMore,
+    InputBox,
 } from './styles/titlebanner';
 
 export default function TitleBanner({ children, ...restProps }) {
@@ -19,6 +19,6 @@ TitleBanner.Title = function TitleBannerTitle({ children, ...restProps }) {
     return <Title {...restProps}>{children}</Title>;
 }
 
-TitleBanner.ReadMore = function TitleBannerReadMore({ children, ...restProps }) {
-    return <ReadMore {...restProps}>{children}</ReadMore>;
+TitleBanner.InputBox = function TitleBannerInputBox({ children, ...restProps }) {
+    return <InputBox {...restProps}>{children}</InputBox>;
 }

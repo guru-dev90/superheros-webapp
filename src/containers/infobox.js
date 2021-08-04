@@ -1,38 +1,20 @@
 import React from "react"
 import { Infobox } from "../components"
 
-export default function infobox({data, type}){
+export default function InfoboxContainer({data}){
     return(
       <Infobox>
           <Infobox.Frame size="35%">
-              <Infobox.Image src={data.image}></Infobox.Image>
+              <Infobox.Image src={data.images.sm}>
+                {
+                //<Infobox.Icon src={process.env.PUBLIC_URL + '/images/assets/small-heart/small-heart.svg'} alt="Like"/>
+                }
+              </Infobox.Image>
           </Infobox.Frame>
           <Infobox.Frame size="65%">
               <Infobox.Title>{data.name}</Infobox.Title>
-              <Infobox.Date>{data.date}</Infobox.Date>
-              <Infobox.Grid margin="0rem">
-                <Infobox.ActivityTime><b>{data.startingTime}</b> - {data.endingTime}</Infobox.ActivityTime>
-                <Infobox.Duration>{data.duration}</Infobox.Duration>
-              </Infobox.Grid>
-              
-              { type === "bookings" 
-              ?
-                <Infobox.Grid margin="1rem">
-                    <Infobox.GridColumn>
-                        <Infobox.GridTitle>Club</Infobox.GridTitle>
-                        <Infobox.GridValue>{data.club}</Infobox.GridValue>
-                    </Infobox.GridColumn>
-                    <Infobox.GridColumn>
-                        <Infobox.GridTitle>Sala</Infobox.GridTitle>
-                        <Infobox.GridValue>{data.sala}</Infobox.GridValue>
-                    </Infobox.GridColumn>
-                </Infobox.Grid>
-              :
-                <Infobox.Grid margin="1rem">
-                    <Infobox.WaitingBeforeMe>{`${data.waitingBeforeMe} persone prima di te`}</Infobox.WaitingBeforeMe>
-                    <Infobox.ButtonText>{data.buttonText}</Infobox.ButtonText>
-                </Infobox.Grid>
-              }
+              <Infobox.Text>{data.biography.fullName}</Infobox.Text>
+              <Infobox.Text><p style={{color:'white', fontSize: '0.7rem', display: 'inline'}}>9.7</p>/10</Infobox.Text>
           </Infobox.Frame>
       </Infobox>
     )
