@@ -29,27 +29,18 @@ export const Item = styled.div`
 
 export const Header = styled.div`
     display: flex;
+    justify-content: space-between;
     text-align: left;
     cursor: pointer;
     box-sizing: border-box;
     margin-bottom: 1px;
     font-size: 13px;
     font-weight: 700;
-    padding: 1.2em 3em 1.2em 5em;
+    padding: 1.2em 2em;
     user-select: none;
     align-items: center;
     width: 100%;
     color: white;
-    
-    
-    img {
-        filter: brightness(0) invert(1);
-        width: 24px;
-        
-        @media (max-width: 600px) {
-            width: 16px;
-        }
-    }
     
     @media (max-width: 600px) {
         font-size: 14px;

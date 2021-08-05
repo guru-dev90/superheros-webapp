@@ -1,8 +1,12 @@
-import React from "react"
-import { Titlebanner } from "."
+import React,{ useContext } from "react"
 import { TitleBanner } from "../components"
 
+import { Context } from '../context/Context';
+
 export default function TitleBannerContainer({data}){
+
+    const {searchTerm,setSearchTerm} = useContext(Context)
+
     return(
         <TitleBanner>
             <TitleBanner.Frame>
@@ -10,6 +14,8 @@ export default function TitleBannerContainer({data}){
                 
                 <TitleBanner.InputBox
                     placeholder="Search"
+                    value={searchTerm}
+                    onChange={({ target }) => setSearchTerm(target.value)}
                 />
             </TitleBanner.Frame>
         </TitleBanner>

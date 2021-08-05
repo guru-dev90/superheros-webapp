@@ -1,20 +1,34 @@
 import React from "react"
-import { Infobox } from "../components"
+import { Infobox, HeartIcon } from "../components"
+import fistIcon from '../icons/fist/fist.svg';
 
-export default function InfoboxContainer({data}){
+export default function InfoboxContainer({iconType, data, onClick}){
+
+  let sum= 0
+  
+  for (const property in data.powerstats) {
+    sum = sum + data.powerstats[property]
+  }
+
+  let power = Math.floor((sum * 10) / 600)
+
     return(
-      <Infobox>
+      <Infobox onClick={onClick} background={data.images.sm}>
           <Infobox.Frame size="35%">
-              <Infobox.Image src={data.images.sm}>
-                {
-                //<Infobox.Icon src={process.env.PUBLIC_URL + '/images/assets/small-heart/small-heart.svg'} alt="Like"/>
-                }
-              </Infobox.Image>
+            <div style={{position: 'relative', width: "fit-content", height: "fit-content"}}>
+              <Infobox.Image src={data.images.sm}/>
+              <HeartIcon.Container>
+                <HeartIcon.Icon active={true} src={iconType}/>
+              </HeartIcon.Container>
+            </div>
           </Infobox.Frame>
           <Infobox.Frame size="65%">
               <Infobox.Title>{data.name}</Infobox.Title>
-              <Infobox.Text>{data.biography.fullName}</Infobox.Text>
-              <Infobox.Text><p style={{color:'white', fontSize: '0.7rem', display: 'inline'}}>9.7</p>/10</Infobox.Text>
+              <Infobox.Text>{data.biography.fullName ? data.biography.fullName : 'Name not available'}</Infobox.Text>
+              <Infobox.Text>
+                <img src={fistIcon} alt="Fist Icon"/>
+                <p style={{color:'white', fontSize: '0.7rem', display: 'inline'}}>{power}</p>/10
+              </Infobox.Text>
           </Infobox.Frame>
       </Infobox>
     )

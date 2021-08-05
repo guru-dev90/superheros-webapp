@@ -9,6 +9,7 @@ export const Background = styled.section`
     align-items: center;
     width: 100%;
     margin-top: 0.7rem;
+    min-width: 467px;
 
 `
 
@@ -19,9 +20,6 @@ export const Container = styled.div`
     height: inherit;
     margin: 0.5em;
 
-    @media (max-width: 1024px) {
-        width: 250px;
-    }
 `
 
 export const Title = styled.h4`
@@ -31,7 +29,7 @@ export const Title = styled.h4`
 `
 
 export const InputBox = styled.input`
-    background: url(${img}) no-repeat scroll 7px 5px #403b3b;
+    background: url(${img}) no-repeat scroll 7px 5px #4c4958;
     background-size: 18px 18px;
     padding-left:30px;
     width: 250px;
@@ -41,4 +39,6 @@ export const InputBox = styled.input`
     border: none;
     color: white;
     outline: none;
+
+    font-weight: 600;
 `
