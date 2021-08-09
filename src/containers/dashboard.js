@@ -1,4 +1,5 @@
 import React, {useContext,useEffect, useState} from "react"
+import { AutoSizer, List } from 'react-virtualized';
 
 import { Context } from '../context/Context'
 
@@ -7,6 +8,11 @@ import { Infobox } from "../containers"
 import MediumHeartIcon from '../icons/medium-heart/medium-heart.svg'
 import Fuse from 'fuse.js'
 import _ from "lodash";
+import styled from "styled-components";
+
+
+const ITEMS_COUNT = 20
+const ITEM_SIZE = 200
 
 export default function DashboardContainer(){
 
@@ -32,29 +38,70 @@ export default function DashboardContainer(){
             setHeros(herosCopy)
         }
     }, [searchTerm])
+
+    let results =  heros.map( item => (
+            <Infobox 
+                key={item.id}
+                onClick={ () => {
+                    
+                    let likedListCopy = _.cloneDeep(likedList);
+                    likedListCopy.push(item)
+                    const herosResult = heros.filter( elem => elem !== item );
+                    setLikedList(likedListCopy) 
+                    setHeros(herosResult)
+
+                }} 
+                iconType={MediumHeartIcon} 
+                data={item}
+            />
+        )
+    )
     
     return(
-        <Dashboard>
-            <Dashboard.Frame>
-            {
-                heros.map( item => (
-                    <Infobox 
-                        key={item.id}
-                        onClick={ () => {
-                            
-                            let likedListCopy = _.cloneDeep(likedList);
-                            likedListCopy.push(item)
-                            const herosResult = heros.filter( elem => elem !== item );
-                            setLikedList(likedListCopy) 
-                            setHeros(herosResult)
+        
+                <AutoSizer>
+                    {({ height, width }) => {
+                    const itemsPerRow = Math.floor(width / ITEM_SIZE);
+                    const rowCount = Math.ceil(ITEMS_COUNT / itemsPerRow);
+                    
+                    return (
+                        <List
+                            scrollToAlignment='start'
+                            width={width}
+                            height={height}
+                            rowCount={rowCount}
+                            rowHeight={ITEM_SIZE}
+                            rowRenderer={
+                                ({ index, key, style }) => {
+                                const items = [];
+                                const fromIndex = index * itemsPerRow;
+                                const toIndex = Math.min(fromIndex + itemsPerRow, ITEMS_COUNT);
 
-                        }} 
-                        iconType={MediumHeartIcon} 
-                        data={item}
-                    />
-                ))
-            }    
-            </Dashboard.Frame>
-        </Dashboard>
+                                for (let i = fromIndex; i < toIndex; i++) {
+                                    items.push(results[i])
+                                }
+
+                                return (
+                                    <div
+                                    className="row"
+                                    style={{
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        boxSizing: 'border-box',
+                                        ...style
+                                    }}
+                                    key={key}
+                                    >
+                                    {items}
+                                    </div>
+                                )
+                            }}
+                        />
+                    )
+                    }}
+                </AutoSizer> 
+                      
     )
 }

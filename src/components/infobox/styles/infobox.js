@@ -12,10 +12,10 @@ export const Background = styled.div`
     position: relative;
 
     display: flex;
-    height: 125px;
-    width: 195px;
-    margin: 0.3em;
-    border-radius: 5px;
+    height: 165px;
+    width: 280px;
+    margin: 0 0.5em;
+    border-radius: 10px;
 
     &::before {
         content: "";
@@ -42,12 +42,12 @@ export const Image = styled.img`
     
     margin: 0.5em;
     border-radius: 5px;
-    max-height: 110px;
+    max-height: 150px;
 `
 
 export const Title = styled.h5`
     position: relative;
-    font-size: 0.8rem;
+    font-size: 1em;
     margin: 0.8rem 0rem;
     color: white;
 
@@ -55,7 +55,7 @@ export const Title = styled.h5`
 
 export const Text = styled.h6`
     position: relative;
-    font-size: 0.7rem;
+    font-size: 0.9em;
     margin-top: 0rem;
     margin-bottom: 0.3rem;
     color: #d3d9e8e3;
@@ -64,7 +64,7 @@ export const Text = styled.h6`
 
 export const Icon = styled.img`
     position: relative;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-top: 0rem;
     margin-bottom: 0.3rem;
     color: #797a7dc2;

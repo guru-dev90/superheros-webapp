@@ -11,8 +11,8 @@ export const Container=styled.span`
     align-items: center;
     background-color: #6554a8;
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
+    height: 35px;
+    width: 35px;
 
     ${(props) => props.children.props.active ? `
         position: absolute;
@@ -23,5 +23,5 @@ export const Container=styled.span`
 `
 
 export const Icon = styled.img`
-    width: 10px;
+    width: 15px;
 `

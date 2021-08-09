@@ -27,7 +27,7 @@ export default function InfoboxContainer({iconType, data, onClick}){
               <Infobox.Text>{data.biography.fullName ? data.biography.fullName : 'Name not available'}</Infobox.Text>
               <Infobox.Text>
                 <img src={fistIcon} alt="Fist Icon"/>
-                <p style={{color:'white', fontSize: '0.7rem', display: 'inline'}}>{power}</p>/10
+                <p style={{color:'white', fontSize: '0.9em', display: 'inline'}}>{power}</p>/10
               </Infobox.Text>
           </Infobox.Frame>
       </Infobox>
