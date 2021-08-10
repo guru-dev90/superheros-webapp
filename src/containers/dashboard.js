@@ -1,5 +1,5 @@
 import React, {useContext,useEffect, useState} from "react"
-import { AutoSizer, List } from 'react-virtualized';
+import { AutoSizer, Grid } from 'react-virtualized';
 
 import { Context } from '../context/Context'
 
@@ -65,36 +65,35 @@ export default function DashboardContainer(){
                     const rowCount = Math.ceil(ITEMS_COUNT / itemsPerRow);
                     
                     return (
-                        <List
-                            scrollToAlignment='start'
+                        <Grid
+                            
                             width={width}
                             height={height}
                             rowCount={rowCount}
+                            columnCount={itemsPerRow}
                             rowHeight={ITEM_SIZE}
-                            rowRenderer={
-                                ({ index, key, style }) => {
-                                const items = [];
-                                const fromIndex = index * itemsPerRow;
-                                const toIndex = Math.min(fromIndex + itemsPerRow, ITEMS_COUNT);
-
-                                for (let i = fromIndex; i < toIndex; i++) {
-                                    items.push(results[i])
-                                }
+                            columnWidth={width/itemsPerRow}
+                            cellRenderer={
+                                ({columnIndex, key, rowIndex, style}) => {
+                                
+                                let index = ( rowIndex === 0 ) ? columnIndex : (((rowIndex * itemsPerRow) - 1) + (columnIndex + 1))
 
                                 return (
                                     <div
-                                    className="row"
-                                    style={{
-                                        display: 'flex',
-                                        flexDirection: 'row',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        boxSizing: 'border-box',
-                                        ...style
-                                    }}
-                                    key={key}
+                                        className="row"
+                                        style={{
+                                            display: 'flex',
+                                            flexDirection: 'row',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            boxSizing: 'border-box',
+                                            ...style
+                                        }}
+                                        key={key}
                                     >
-                                    {items}
+                                    {
+                                        results[index]
+                                    }
                                     </div>
                                 )
                             }}
